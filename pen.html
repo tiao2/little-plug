@@ -4,9 +4,12 @@
   <head>
     <title>Canvas</title>
     <meta name = "viewport" content = "width = device-width, user-scalable = no">
+    <link rel='stylesheet'  href='styles/pen.css'/>
   </head>
   <body>
    <canvas id="canvas"></canvas>
+   <div id='bc'>Pen Color:<input placeholder='Input color(#hex or css color)' id='cs'/><button onclick='ch()'>Submit</button><button onclick='document.getElementById("bc").remove()'>Close</button></div>
+   <div id='search'></div>
    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.3.2/html2canvas.min.js"></script>
    <script type="text/javascript" charset="utf-8" src="scripts/draw.js"></script>
 </body>
