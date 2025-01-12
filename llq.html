@@ -18,24 +18,6 @@
 <body>
     <div id='hd'><input id='se' type='search' placeholder='输入网址…'/></div>
     <iframe src="" id='ser' frameborder='none' style='position:absolute;top:10%;left:0%;height:90%;width:100%;'></iframe>
-    <script>
-       document.getElementById("se").addEventListener('keydown',function(e){
-          if(e.key==="Enter"){
-             document.getElementById("ser").src=document.getElementById('se').value;
-      }
-  });
-var iframe = document.getElementById('ser');
-iframe.onload = function() {
-    var iframeDoc = iframe.contentDocument || iframe.contentWindow.document;
-    iframeDoc.addEventListener('click', function(event) {
-        var target = event.target;
-        if (target.tagName.toLowerCase() === 'a' && target.href) {
-            document.getElementById("se").value=target.href;
-            iframe.src=document.getElementById('se').value;
-            event.preventDefault();
-        }
-    }, true);
-};
-   </script>
+    <script src='scripts/br.js'></script>
 </body>
 </html>
